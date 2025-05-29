@@ -31,4 +31,5 @@ const AuthenticationPage = async () => {
     </div>
   );
 };
+
 export default AuthenticationPage;
