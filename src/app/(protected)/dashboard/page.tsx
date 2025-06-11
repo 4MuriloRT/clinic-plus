@@ -26,6 +26,7 @@ import TopSpecialties from "./_components/top-specialties";
 
 interface DashboardPageProps {
   searchParams: Promise<{
+    from: string;
     to: string;
   }>;
 }
