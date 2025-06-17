@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
+import LandingPage from "./landing-page/page";
 
 export default function Home() {
-  return <Button>Bootcamp!</Button>;
+  return <LandingPage />;
 }
