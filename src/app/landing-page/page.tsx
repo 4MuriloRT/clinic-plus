@@ -11,6 +11,7 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -34,12 +35,12 @@ export default function LandingPage() {
             </div>
             {/* Header Actions */}
             <div className="flex items-center space-x-4">
-              <span className="hidden cursor-pointer font-medium text-blue-600 hover:underline md:inline">
-                Preços e Planos
-              </span>
-              <span className="hidden cursor-pointer font-medium text-blue-600 hover:underline md:inline">
-                Entrar em sua conta
-              </span>
+              <Link href="/new-subscription">
+                <span className="hidden cursor-pointer font-medium text-blue-600 hover:underline md:inline">
+                  Preços e Planos
+                </span>
+              </Link>
+
               <span
                 className="hidden cursor-pointer font-medium text-blue-600 hover:underline md:inline"
                 onClick={() =>
@@ -50,7 +51,17 @@ export default function LandingPage() {
               >
                 Contato
               </span>
-              <Button className="bg-blue-500 hover:bg-blue-600">Login</Button>
+              <Link href="/authentication">
+                <span className="hidden cursor-pointer font-medium text-blue-600 hover:underline md:inline">
+                  Login
+                </span>
+              </Link>
+
+              <Link href="/authentication">
+                <Button className="bg-blue-500 hover:bg-blue-600">
+                  Criar Conta
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -83,14 +94,7 @@ export default function LandingPage() {
                 size="lg"
                 className="bg-blue-500 px-8 text-white hover:bg-blue-600"
               >
-                Teste Grátis!
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-blue-200 px-8 text-blue-600 hover:bg-blue-50"
-              >
-                Nos ligamos para você
+                <Link href="/new-subscription">Ver Plano Essential</Link>
               </Button>
             </div>
           </div>
@@ -238,7 +242,7 @@ export default function LandingPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Logo e Descrição */}
             <div className="space-y-4">
-              <div className="bg-white w-40 flex justify-center rounded-full py-1">
+              <div className="flex w-40 justify-center rounded-full bg-white py-1">
                 <Image
                   src="/logo.svg"
                   alt="Doutor Agenda"
