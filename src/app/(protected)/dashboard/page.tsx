@@ -101,7 +101,6 @@ const DashboardPage = async ({ searchParams }: DashboardPageProps) => {
           </div>
           <div className="grid grid-cols-[2.25fr_1fr] gap-4">
             <Card>
-              Add commentMore actions
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Calendar className="text-muted-foreground" />
