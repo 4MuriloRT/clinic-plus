@@ -68,6 +68,10 @@ export const getAvailableTimes = actionClient
       .set("minute", Number(doctor.availableToTime.split(":")[1]))
       .set("second", 0)
       .local();
+
+    const now = dayjs();
+    const isToday = dayjs(parsedInput.date).isSame(now, 'day');
+
     const doctorTimeSlots = timeSlots.filter((time) => {
       const date = dayjs()
         .utc()
@@ -75,10 +79,16 @@ export const getAvailableTimes = actionClient
         .set("minute", Number(time.split(":")[1]))
         .set("second", 0);
 
-      return (
+      const isWithinDoctorAvailability =
         date.format("HH:mm:ss") >= doctorAvailableFrom.format("HH:mm:ss") &&
         date.format("HH:mm:ss") <= doctorAvailableTo.format("HH:mm:ss")
-      );
+      
+      if(isToday){
+        const slotTime = dayjs().set("hour", date.hour()).set("minute", date.minute()).set("second", date.second());
+        return isWithinDoctorAvailability && slotTime.isAfter(now);
+      }
+
+      return isWithinDoctorAvailability;
     });
     return doctorTimeSlots.map((time) => {
       return {

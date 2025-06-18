@@ -155,6 +155,14 @@ const AddAppointmentForm = ({
       (doctor) => doctor.id === selectedDoctorId,
     );
     if (!selectedDoctor) return false;
+
+    const today = dayjs().startOf("day");
+    const selectedDateDayJs = dayjs(date).startOf("day");
+
+    if(selectedDateDayJs.isBefore(today, "day")){
+      return false;
+    }
+
     const dayOfWeek = date.getDay();
     return (
       dayOfWeek >= selectedDoctor?.availableFromWeekDay &&
@@ -286,7 +294,7 @@ const AddAppointmentForm = ({
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) =>
-                        date < new Date() || !isDateAvailable(date)
+                        !isDateAvailable(date)
                       }
                       initialFocus
                     />
