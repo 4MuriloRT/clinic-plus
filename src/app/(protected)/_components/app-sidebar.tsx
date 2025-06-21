@@ -74,7 +74,9 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader className="border-b p-4">
-        <Image src="/logo.svg" alt="Doutor Agenda" width={136} height={28} />
+        <Link href="/landing-page">
+          <Image src="/logo.svg" alt="Doutor Agenda" width={136} height={28} />
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
