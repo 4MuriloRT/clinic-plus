@@ -20,11 +20,9 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
-      {/* Header */}
       <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <div className="flex items-center space-x-2">
               <Image
                 src="/logo.svg"
@@ -33,7 +31,6 @@ export default function LandingPage() {
                 height={28}
               />
             </div>
-            {/* Header Actions */}
             <div className="flex items-center space-x-4">
               <Link href="/new-subscription">
                 <span className="hidden cursor-pointer font-medium text-blue-600 hover:underline md:inline">
@@ -67,10 +64,8 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge
@@ -88,7 +83,6 @@ export default function LandingPage() {
               </p>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button
                 size="lg"
@@ -99,9 +93,7 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Right Content - Doctor Image with Cards */}
           <div className="relative">
-            {/* Main Doctor Image */}
             <div className="relative">
               <Image
                 src="/medico-tablet.jpg"
@@ -111,7 +103,6 @@ export default function LandingPage() {
                 className="rounded-lg"
               />
 
-              {/* Floating Cards */}
               <Card className="absolute top-8 left-4 w-48 shadow-lg">
                 <CardContent className="p-3">
                   <div className="mb-3 flex items-center space-x-2">
@@ -182,7 +173,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="bg-white py-11">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
@@ -240,7 +230,6 @@ export default function LandingPage() {
       <footer id="footer" className="bg-gray-900 py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Logo e Descrição */}
             <div className="space-y-4">
               <div className="flex w-40 justify-center rounded-full bg-white py-1">
                 <Image
@@ -257,7 +246,6 @@ export default function LandingPage() {
               </p>
             </div>
 
-            {/* Contato */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold">Contato</h4>
               <div className="space-y-3">
@@ -278,7 +266,6 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Redes Sociais */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold">Conecte-se</h4>
               <div className="flex space-x-4">
@@ -317,7 +304,6 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Linha divisória */}
           <div className="mt-12 border-t border-gray-800 pt-8">
             <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
               <p className="text-sm text-gray-400">
