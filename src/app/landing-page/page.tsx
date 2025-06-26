@@ -25,7 +25,7 @@ export default function LandingPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Image
-                src="/logo.svg"
+                src="/logo-clinic-plus.png"
                 alt="Doutor Agenda"
                 width={136}
                 height={28}
@@ -231,9 +231,9 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-4">
-              <div className="flex w-40 justify-center rounded-full bg-white py-1">
+              <div className="flex w-40 justify-center rounded-full bg-gray-900 py-1">
                 <Image
-                  src="/logo.svg"
+                  src="/logo-clinic-plus.png"
                   alt="Doutor Agenda"
                   width={136}
                   height={28}

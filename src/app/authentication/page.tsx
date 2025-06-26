@@ -21,7 +21,7 @@ const AuthenticationPage = async () => {
       <div className="flex h-screen w-1/2 flex-col items-center justify-between bg-blue-100">
         <div className="m-20 pr-76">
           <Link href="/landing-page">
-            <Image src="/logo.svg" alt="" width={200} height={40} />
+            <Image src="/logo-clinic-plus.png" alt="" width={200} height={40} />
           </Link>
         </div>
         <div className="mb-10 text-blue-950">
